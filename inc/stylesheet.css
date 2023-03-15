@@ -3,12 +3,15 @@
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+html {
+    min-height: 100vh;
+    width: 100vw;
+}
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 100vh;
     color: white;
     background-image: linear-gradient(to right bottom, #051937, #34265b, #702872, #b01d77, #eb1267); 
 }
@@ -16,6 +19,7 @@ header {
     display: flex;
     justify-content: center;
     font-weight: 500;
+    margin: 20px 0 130px 0;
 }
 header h1 {
     font-size: 4em;
@@ -25,7 +29,20 @@ header h1 {
     background-clip: text;
     -webkit-background-clip: text;
     text-align: center;
-  }
+}
+@media screen and (max-width: 900px) {
+    header h1 {
+        font-size: 3em;
+    }
+    .content .message img {
+        width: 350px;
+    }
+}
+@media screen and (max-width: 677px) {
+    header {
+        margin: 20px 0 75px 0;
+    }
+}
 .content {
     display: flex;
     flex-direction: column;
@@ -33,11 +50,14 @@ header h1 {
     justify-content: center;
 }
 .message {
-    visibility: hidden;
+    opacity: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+    transition: all 0.3s linear;
 }
 .message h3 {
     font-weight: 300;
@@ -144,6 +164,11 @@ a {
     margin: 0 10px 0 10px;
 }
 
+.wiggle {
+    -webkit-animation: wiggle 0.2s ease infinite;
+    animation: wiggle 0.2s ease infinite;
+}
+
 @-webkit-keyframes inputHighlighter {
     from { background:#5264AE; }
 to 	{ width:0; background:transparent; }
@@ -171,4 +196,16 @@ to 	{ width:0; background:transparent; }
     100% {
         opacity: 0.1;
     }
+}
+@-webkit-keyframes wiggle
+{
+    0% {-webkit-transform: rotateZ(2deg);}
+    50% {-webkit-transform: rotateZ(-2deg);}
+    100% {-webkit-transform: rotateZ(2deg);}
+}
+@keyframes wiggle
+{
+    0% {transform: rotateZ(2deg);}
+    50% {transform: rotateZ(-2deg);}
+    100% {transform: rotateZ(2deg);}
 }
