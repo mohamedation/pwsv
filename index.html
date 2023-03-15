@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="Password Strength Validator">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/inc/stylesheet.css">
+    </head>
+    <body>
+        <header>
+            <h1>Password Strength Validator</h1>
+        </header>
+        <div class="content">
+            <h2>Enter Your password</h2>
+            <div class="group">
+                <input id="password" placeholder="Password" type="text" oninput="changeMessage()" />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <div id="message" class="message">
+                <img src="/inc/img/ah-ah-ah.gif">
+                <h3>DO NOT ENTER YOUR PASSWORD IN PLACES YOU DO NOT TRUST</h3>
+            </div>
+        </div>
+        <div class="footer-wrap">
+            <div class="footer">
+                <p>created by <a href="https://twitter.com/mohamedation" target="_blank">mohamedation</a></p><span class="seperator"></span>
+                <a href="https://www.buymeacoffee.com/mohamedation" target="_blank"><img src="inc/img/bmc-button.svg" alt="Buy Me A Coffee" ></a>
+            </div>
+
+        </div>
+        
+        <script src="/inc/scripts.js" async defer></script>
+    </body>
+</html>

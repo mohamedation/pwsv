@@ -1,0 +1,15 @@
+<html>
+<head>
+<script>
+function changeMessage() {
+  var input = document.getElementById("password");
+  input.value = "Hello!";
+}
+</script>
+</head>
+<body>
+<div style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+<input id="password" type="password" oninput="changeMessage()" />
+</div>
+</body>
+</html>
